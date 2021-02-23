@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+      - name: create a file in the home dir
+        file:
+            state: touch
+            path: "{{ ansible_user_dir }}/ansible-was-here-2"
